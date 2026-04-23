@@ -3,9 +3,9 @@
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
-    <title>Dr. Niek Bollemeijer</title>
+    <title>Niek Bollemeijer</title>
     <meta name="description" content="Niek Bollemeijer personal website black hole X-ray binaries spectral-timing">
-    <meta name="author" content="Dr. Niek Bollemeijer">
+    <meta name="author" content="Niek Bollemeijer">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="icon" type="image/png" href="favicon.png">
   
@@ -23,18 +23,55 @@
     <!-- Want to add Bootstrap? -->
     <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
     
+    <title>Two Column Layout</title>
+    <style>
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    .text-column {
+      flex: 1;
+    }
+
+    .image-column {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image-column img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive: stack on small screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+    
+    
   </head>
   
   <body>
 
     <header id="header">
-      <img src="logo_v1_tr.png" width="180" height="120">
-      <h1>Dr. Niek Bollemeijer</h1>
+     <!-- <img src="logo_v1_tr.png" width="180" height="120">  -->
+      <h1>Niek Bollemeijer</h1>
+      <h3>X-ray astronomer </h3>
       
       <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
       <ul class="main-menu">
         <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
+        <li><a href="#research">research</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>                 
     </header>
@@ -57,26 +94,98 @@
             </p>
           </div>
           
-          <div id="about" class="content-region hide">
-            <h2>Research</h2>
-            <p>
-              Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
-            </p>
-          </div>
+          <div id="research" class="content-region hide">
           
-          <div id="contact" class="content-region hide">
-            <h2>Contact</h2>
-            <p>
-              If you have any questions, feel free to send me an email.
-            </p>
-          </div>
+            <div class="container">
+            	<div class="text-column">
+            	<h3>Publication list</h3>
+            	<p>
+            	For an overview of my publications on ADS, see this <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20author%3A%22Bollemeijer%2C%20Niek%22&sort=date%20desc%2C%20bibcode%20desc"> link</a>.
+            	</p>
+
+				</div>
+					<div class="image-column">
+				</div>
+			</div>
+
           
-        </div>
+            <div class="container">
+              <div class="text-column">
+            <h3>Black hole X-ray binaries</h3>
+				  <p>
+				  
+				  
+            My research focuses on finding new ways to analyse the variability observed in the X-ray flux from black hole X-ray binaries. Lone black holes are very difficult to observe, because light cannot escape their close vicinity. When a star orbits a black hole sufficiently close in a configuration known as a black hole X-ray binary, matter can flow from the star towards the black hole and form an accretion disk. Most of the time, accretion disks are too cold to be observed, but when they become unstable, their temperature rises by orders of magnitude and some of black hole X-ray binaries become among the brightest X-ray sources in the sky for a few weeks or months. Especially at the beginning and end of such an outburst, the X-ray flux is highly variable and this variability can inform us about what is going on in the accretion flow and close to the black hole. My PhD thesis contains several novel ways of analysing the variability in new detail, which I will briefly discuss below.
+				  </p>
+				</div>
+
+				<div class="image-column">
+				<img src="bhxrb_fig-1.png" width = "576" height = "336">
+				<figcaption> Credit: ESO/L. Calçada/M.Kornmesser 
+				</div>
+          	</div>
+          	
+          	
+            <div class="container">
+           	<div class="image-column">
+			<img src="coronal_geometry_schematic.png">
+			</div> 
+           
+              <div class="text-column">
+            <h3>The geometry of the corona</h3>
+				  <p>
+			Most of my research revolves around the origin of the X-rays. Although the accretion disk can be so hot that it emits a lot of X-rays, we observe much higher energy X-rays than can be produced this way. These "harder" (higher-energy) X-rays are thought to be produced by a cloud of hot electrons known as the "corona". Despite decades of research, there is still no consensus on what the corona is and what it looks like. In the figure to the left, which comes from my PhD thesis, I have summarized the possible coronal geometries that have been put forward. Two main scenarios are that the corona is the inner part of the accretion disk, which becomes much hotter and has a donut-like shape or that the corona is the base of the jet that accelerates matter away from the black hole perpendicular to the disk. There are arguments for both scenarios and by analysing data in new ways, I try to provide more constraint on the shape and behaviour of the corona.
+				  </p>
+				</div>
+
+
+          	</div>
+          	
+     <div class="container">
+
+           
+               <div class="text-column">
+            <h3>X-ray spectral-timing and spectroscopy</h3>
+				  <p>
+As a researcher, I focus on two ways of obtaining information from X-ray data. A generic X-ray data set from non-imaging telescopes like NICER and HXMT is very simple, as the main ingredients are the energy and arrival time of each photon. During my PhD, I focused on how the X-ray flux varies on short time-scales. By creating a histogram of the number of photons arriving every time (e.g. 0.01 s), it is possible to create a light curve like the example on the right. Such light curves can be made for different X-ray energy bands, allowing me to compare variability from different parts of the accretion flow. The other method is based on the X-ray energies (or wavelengths) that are emitted. The accretion disk and the corona both emit X-rays in specific spectral shapes, which can be modelled. Part of the coronal emission is reflected by the disk, giving rise to a prominent "reflection spectrum". By modelling the reflection spectrum, it is possible to constrain the coronal geometry. 
+<!--In the figure below, I show how the coronal geometry can be approximated by several rings in the new model relxill_ring <a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...704A.129N/abstract">(Nekrasov et al. 2025)</a>.-->
+				  </p>
+				</div>
+				
+			<div class="image-column">
+			<img src="lightcurve_example_QPO_J1727_102_2-10keV.png">
+			<figcaption> Light curve of black hole X-ray binary Swift J1727.8-1613 made with NICER data.
+			</div> 
+
+
+      </div>
+          	
+          	
+          	<!--
+     <div class="container">
+		 <div class="image-column">
+		 <img src="coronalgeometries_spectrum.png">
+		 <figcaption> The center panel shows the full X-ray spectrum of BHXRB MAXI J1820+070 with NICER and Insight-HXMT data. The left panel shows an artist's impression of the corona as the base of the jet (image credit: NASA/JPL-Caltech/R. Hurt), while the right panel shows an example of what the hot inner flow corona could look like (image credit: Miller-Jones et al. 2019).
+		 </div> 
+     </div>
+     -->
+          	
+          	
+      <div id="contact" class="content-region hide">
+        <h2>Contact</h2>
+        <p>
+          If you have any questions, feel free to send me an email.
+        </p>
+      </div>
+          
+      </div>
+        
+        
       </div>
     </div>
 
     <footer>  
-      This website is based on a template published with Github Pages. <a href="https://github.com/zirafa/simple-website-template">Fork this repository</a> to create your own site!
+      <small>This website is based on a template published with Github Pages. <a href="https://github.com/zirafa/simple-website-template">Fork this repository</a> to create your own site!</small>
     </footer>
     
     <!-- Load additional JS scripts here -->
