@@ -140,4 +140,7 @@ ul.main-menu li a.active {
   display:block;
 }
 
+div.email > span:nth-child(2) {
+	display: none;
+}
 
